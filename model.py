@@ -7,7 +7,7 @@ import pickle
 
 # Simple dataset of three four features 
 # First of all load csv dataset file into dataframe
-dataset = pd.read_csv(Hiring.csv)
+dataset = pd.read_csv("hiring.csv")
 #print the dataset
 
 # feature engineering 
@@ -48,4 +48,4 @@ pickle.dump(regressor, open('model.pkl','wb'))
 model = pickle.load(open('model.pkl','rb'))
 print("Test one prediction")
 # using predict() function to test your model 
-print(model.predict(([7, 9, 6])))
+print(model.predict([[7, 9, 6]]))
